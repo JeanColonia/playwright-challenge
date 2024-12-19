@@ -6,7 +6,7 @@ export class LoginPage extends BasePage {
  private readonly usernameTextBox: Locator
  private readonly passwordTextBox: Locator
  private readonly loginButton: Locator
- private readonly userIdentifier: string
+ private readonly dashboardTitle: string
 
 
  constructor(page: Page) {
@@ -14,7 +14,7 @@ export class LoginPage extends BasePage {
   this.usernameTextBox = page.getByRole('textbox', { name: 'username' });
   this.passwordTextBox = page.getByRole('textbox', { name: 'password' });
   this.loginButton = page.getByRole('button', { name: 'Login' });
-  this.userIdentifier = '.oxd-userdropdown-name';
+  this.dashboardTitle = '.oxd-topbar-header-breadcrumb-module';
  }
 
  async login(username: string, password: string) {
@@ -24,8 +24,8 @@ export class LoginPage extends BasePage {
  }
 
  async getText() {
-  const elementValue = await this.getElementText(this.userIdentifier);
-  return  elementValue;
+  const elementValue = await this.getElementText(this.dashboardTitle);
+  return elementValue;
  }
 
 

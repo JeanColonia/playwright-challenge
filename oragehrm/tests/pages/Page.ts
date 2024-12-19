@@ -14,7 +14,7 @@ export class BasePage {
  }
 
  async click(selector: Locator) {
-  await selector.waitFor({ state: 'visible', timeout: 10000 });
+  await selector.waitFor({ state: 'visible', timeout: 15000 });
   await selector.click();
  }
 
@@ -30,6 +30,16 @@ export class BasePage {
  async getElementText(identifier: string) {
   const elementValue = await this.page.locator(identifier);
   return await elementValue.innerText();
+ }
+
+ async clickElementByText(text: string) {
+  const element = await this.page.getByText(text);
+  await this.click(element);
+
+ }
+
+ async sendInputFile(selector:Locator, path:string){
+  await selector.setInputFiles(path);
  }
 
 }

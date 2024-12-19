@@ -1,4 +1,9 @@
 {
- "username": "Admin",
- "password": "admin123"
+ "imagePath": "oragehrm/tests/resources/imgs/Multiculturalidad.jpeg",
+ "firstName_": "Jean Franklin",
+ "middleName_": "Colonia",
+ "lastName_": "Colonia",
+ "username_": "jeancolonia",
+ "password_": "jeancolonia",
+ "confirmPassword_": "jeancolonia"
 }
