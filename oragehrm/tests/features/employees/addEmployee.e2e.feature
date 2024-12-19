@@ -1,6 +1,6 @@
 Feature: Register Employee
 
-@employee_e2e
+  @employee_e2e
   Scenario: Validate previous created employee
     Given user is located in page Add Employee
     When inserts general information, login details and clicks on save button

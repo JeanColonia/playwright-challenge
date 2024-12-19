@@ -1,5 +1,6 @@
 Feature: Login Orange Page
 
+  @success_login
   Scenario Outline: 'successful login with valid credentials'
     Given user open browser and navigate to orange web "<url>"
     When enters "<username>" and "<password>" and press login

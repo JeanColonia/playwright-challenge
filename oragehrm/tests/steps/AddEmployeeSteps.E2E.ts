@@ -61,7 +61,7 @@ When('inserts general information, login details and clicks on save button', asy
 
 
 Then('registered employee should be present in Persona Details page with corresponding information', async function () {
-
+ await page.waitForTimeout(2500);
  await addEmployePage.validatePersonalDetailsPage();
 
 });

@@ -43,7 +43,8 @@
      npx cucumber-js
 
 
-
+#### Ejecución por tags: 
+     npx cucumber-js --tags "@tagName"
 
 
 

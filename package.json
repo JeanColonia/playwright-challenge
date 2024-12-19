@@ -4,7 +4,8 @@
   "description": "testing orange web with playwright",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test"
+    "test": "cucumber-js test",
+    "test:e2e": "npx cucumber-js --tags '@employee_e2e'"
   },
   "keywords": [
     "playwright",
