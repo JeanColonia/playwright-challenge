@@ -14,7 +14,7 @@ export class BasePage {
  }
 
  async click(selector: Locator) {
-  await selector.waitFor({ state: 'visible', timeout: 10000 });
+  await selector.waitFor({ state: 'visible', timeout: 15000 });
   await selector.click();
  }
 

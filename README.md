@@ -62,4 +62,4 @@
 
 ##### Empleados 
 ###### Técnica de diseño de pruebas: 
-Para este módulo se utilizo la técnica de diseño "Tabla de decisión" teniendo como entradas las credenciales del usuario y 
+       Para este módulo se utilizo la técnica de diseño "Tabla de decisión" teniendo como entradas las credenciales del usuario y 

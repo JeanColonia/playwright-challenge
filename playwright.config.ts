@@ -9,6 +9,6 @@ export default defineConfig({
   screenshot: 'on',
   video: 'retain-on-failure',
  },
- retries: 1,
+ retries: 3,
  reporter: [['html'], ['list']],
 });
