@@ -173,3 +173,50 @@ El patrón que se ha utilizado para este proyecto es Page Object Model (POM), de
 
 ###### Ejecutar el siguiente comando para visualizar el reporte en Cucumber
           npm run test:report
+
+
+
+###### Some execution results:
+
+###### Login feature
+######     Credentials
+[![login-1.png](https://i.postimg.cc/Y28mhnbr/login-1.png)](https://postimg.cc/z3bfQks6)
+
+######     Relocate to Dashboard page
+[![login-success.png](https://i.postimg.cc/QdKBYXsC/login-success.png)](https://postimg.cc/yDBYkCDC)
+
+
+###### Employee feature
+##### Login
+[![1.png](https://i.postimg.cc/DyTn3nqm/1.png)](https://postimg.cc/Z0V1rksh)
+
+
+##### Dashboard
+[![2.png](https://i.postimg.cc/sgnrWWbZ/2.png)](https://postimg.cc/sMZqdMjV)
+
+
+##### Creating Employee
+[![3.png](https://i.postimg.cc/nhVxM2SJ/3.png)](https://postimg.cc/svLqNYR6)
+
+
+
+###### Employees E2E feature
+
+##### Login
+[![1.png](https://i.postimg.cc/DyTn3nqm/1.png)](https://postimg.cc/Z0V1rksh)
+
+
+##### Dashboard
+[![2.png](https://i.postimg.cc/sgnrWWbZ/2.png)](https://postimg.cc/sMZqdMjV)
+
+
+##### Creating Employee
+[![3.png](https://i.postimg.cc/nhVxM2SJ/3.png)](https://postimg.cc/svLqNYR6)
+
+
+##### Searching previously created Employee (Employee List Page)
+[![4.png](https://i.postimg.cc/3wdHFRHf/4.png)](https://postimg.cc/3y56K3N2)
+
+
+
+
