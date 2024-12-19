@@ -96,7 +96,7 @@
 
 
 
-### Especificaciones para descargar el proyecto e ejecutarlo:
+### Especificaciones para descargar el proyecto y ejecutarlo:
 
 ###### Clonar el repositorio: 
           git clone <URL_DEL_REPOSITORIO>

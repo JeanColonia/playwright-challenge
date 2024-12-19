@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js test",
-    "test:e2e": "npx cucumber-js --tags '@employee_e2e'"
+    "test:e2e": "npx cucumber-js --tags '@employee_e2e'",
+    "test:report": "npm run test && node generate-report.js"
   },
   "keywords": [
     "playwright",
