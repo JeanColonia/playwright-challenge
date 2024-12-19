@@ -102,12 +102,4 @@ export class AddEmployeePage extends BasePage {
   await this.personalDetailsTitle.waitFor();
   await this.personalDetailsTitle.innerText();
  }
-
- async goToEmployeeList() {
-  await this.employeeListLink.waitFor();
-  await this.click(this.employeeListLink);
-
- }
-
-
 }

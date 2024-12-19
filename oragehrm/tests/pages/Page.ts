@@ -32,4 +32,10 @@ export class BasePage {
   return await elementValue.innerText();
  }
 
+ async clickElementByText(text: string) {
+  const element = await this.page.getByText(text);
+  await this.click(element);
+
+ }
+
 }

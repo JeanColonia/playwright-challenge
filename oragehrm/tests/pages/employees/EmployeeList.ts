@@ -9,6 +9,7 @@ export class EmployeeList extends BasePage {
  private readonly searchBtn: Locator
  private readonly employeeResultsTable: Locator
  private readonly resultslistBox: Locator
+ private readonly firstResultEditBtn: Locator
 
 
  constructor(page: Page) {
@@ -19,6 +20,9 @@ export class EmployeeList extends BasePage {
   this.searchBtn = page.getByRole('button', { name: 'Search' });
   this.employeeResultsTable = page.locator('.oxd-table-body');
   this.resultslistBox = page.locator('//div[@role=\'listbox\']');
+
+  this.firstResultEditBtn = page.locator('//div[@class=\'oxd-table-cell-actions\']/button[2]');
+
 
  }
 
@@ -51,4 +55,17 @@ export class EmployeeList extends BasePage {
   const employees = await this.employeeResultsTable.allInnerTexts();
   return employees;
  }
+
+ async clickExpectedResult() {
+  const employee = await this.employeeResultsTable.first();
+  await this.click(employee);
+
+ }
+
+ async clickResult() {
+  await this.firstResultEditBtn.waitFor();
+  await this.click(this.firstResultEditBtn);
+ }
+
+
 }
