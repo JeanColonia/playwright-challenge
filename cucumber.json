@@ -1,0 +1,14 @@
+{
+ "default": {
+  "dryRun": false,
+  "formatOptions": {
+   "snippetInterface": "async-await"
+  },
+  "paths": ["oragehrm/tests/features/**/*.feature"],
+  "require": ["oragehrm/tests/steps/**/*.ts"],
+  "requireModule": [
+   "ts-node/register"
+  ],
+  "format":[]
+ }
+}
