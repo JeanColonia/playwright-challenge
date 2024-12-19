@@ -4,6 +4,7 @@ import { BasePage } from '../Page';
 export class AddEmployeePage extends BasePage {
 
  private readonly addBtn: Locator
+ private readonly addImageInput: Locator
  private readonly firstName: Locator
  private readonly middleName: Locator
  private readonly lastName: Locator
@@ -32,6 +33,7 @@ export class AddEmployeePage extends BasePage {
  constructor(page: Page) {
   super(page);
   this.addBtn = page.locator('//button[normalize-space()=\'Add\']');
+  this.addImageInput = page.locator('input[type=\'file\']');
   this.firstName = page.getByRole('textbox', { name: 'First Name' });
   this.middleName = page.getByRole('textbox', { name: 'Middle Name' });
   this.lastName = page.getByRole('textbox', { name: 'Last Name' });
@@ -70,7 +72,9 @@ export class AddEmployeePage extends BasePage {
 
  }
 
- async addEmployee(firstName_: string, middleName_: string, lastName_: string, username_: string, password_: string, confirmPassword_: string) {
+ async addEmployee(imagePath: string, firstName_: string, middleName_: string, lastName_: string, username_: string, password_: string, confirmPassword_: string) {
+
+  await this.sendInputFile(this.addImageInput, imagePath);
   await this.type(this.firstName, firstName_);
   await this.type(this.middleName, middleName_);
   await this.type(this.lastName, lastName_);
@@ -101,5 +105,13 @@ export class AddEmployeePage extends BasePage {
  async validatePersonalDetailsPage() {
   await this.personalDetailsTitle.waitFor();
   await this.personalDetailsTitle.innerText();
+ }
+
+
+ async addProfileImage(imagePath: string) {
+  await this.employeeName.waitFor();
+
+  await this.sendInputFile(this.addImageInput, imagePath);
+
  }
 }

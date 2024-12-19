@@ -18,6 +18,7 @@ let loginPage: LoginPage;
 let addEmployePage: AddEmployeePage;
 let employeeList: EmployeeList;
 
+const imagePath_ = employee.imagePath;
 const firstName_ = randomValue(employee.firstName_);
 const middleName_ = employee.middleName_;
 const lastName_ = employee.middleName_;
@@ -46,7 +47,7 @@ Given('the user is on the PIM page and clicks the {string} button', async functi
 
 When('provides the basic candidate information, uploads the resume, additional details and  clicks the {string} button', async function (string) {
 
- await addEmployePage.addEmployee(firstName_, middleName_, lastName_, username_, password_, confirmPassword_);
+ await addEmployePage.addEmployee(imagePath_,firstName_, middleName_, lastName_, username_, password_, confirmPassword_);
  // await addEmployePage.partialAddEmployee("JC Franklin", "Franklin", "Colonia");
 
 

@@ -19,6 +19,7 @@ let addEmployePage: AddEmployeePage;
 let employeeList: EmployeeList;
 let addEmployee2E2: AddEmployeePageE2E;
 
+const imagePath_ = employee.imagePath;
 const firstName_ = randomValue(employee.firstName_);
 const middleName_ = employee.middleName_;
 const lastName_ = employee.middleName_;
@@ -52,7 +53,7 @@ Given('user is located in page Add Employee', async function () {
 
 
 When('inserts general information, login details and clicks on save button', async function () {
- await addEmployePage.addEmployee(firstName_, middleName_, lastName_, username_, password_, confirmPassword_);
+ await addEmployePage.addEmployee(imagePath_, firstName_, middleName_, lastName_, username_, password_, confirmPassword_);
 
 
 });

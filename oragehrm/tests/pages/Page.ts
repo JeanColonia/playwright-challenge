@@ -38,4 +38,8 @@ export class BasePage {
 
  }
 
+ async sendInputFile(selector:Locator, path:string){
+  await selector.setInputFiles(path);
+ }
+
 }
