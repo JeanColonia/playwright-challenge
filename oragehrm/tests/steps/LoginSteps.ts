@@ -1,4 +1,4 @@
-import { Given, When, Then, Before, After } from '@cucumber/cucumber';
+import { Given, When, Then, Before, After, BeforeAll, AfterAll } from '@cucumber/cucumber';
 import { Browser, BrowserContext, chromium, expect, Page } from 'playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 
@@ -7,7 +7,7 @@ let bCtx: BrowserContext;
 let page: Page;
 let loginPage: LoginPage;
 
-Before(async () => {
+BeforeAll(async () => {
   browser = await chromium.launch({ headless: false, channel: "chrome", args: ['--start-maximized'] });
   bCtx = await browser.newContext({ viewport: null, javaScriptEnabled: true });
   page = await bCtx.newPage();
@@ -36,6 +36,8 @@ Then('should be redirected to the dashboard page and shows {string}', async func
 });
 
 
-After(async () => {
-
-});
+AfterAll(async function () {
+  await page.close();
+  await bCtx.close();
+  await browser.close();
+})

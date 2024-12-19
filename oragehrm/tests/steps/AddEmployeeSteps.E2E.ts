@@ -1,4 +1,4 @@
-import { Given, When, Then, Before, After } from '@cucumber/cucumber';
+import { Given, When, Then, Before, After, AfterAll, BeforeAll } from '@cucumber/cucumber';
 import { Browser, BrowserContext, chromium, Page } from 'playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { AddEmployeePage } from '../pages/employees/AddEmployeePage';
@@ -28,7 +28,7 @@ const password_ = randomValue(employee.password_);
 const confirmPassword_ = password_;
 
 
-Before(async function () {
+BeforeAll(async function () {
  browser = await chromium.launch({ headless: false, channel: "chrome", args: ['--start-maximized'] });
  bCtx = await browser.newContext({ viewport: null, javaScriptEnabled: true });
  page = await bCtx.newPage();
@@ -75,3 +75,8 @@ Then('should be present in employee list page', async function () {
 });
 
 
+AfterAll(async function () {
+ await page.close();
+ await bCtx.close();
+ await browser.close();
+})

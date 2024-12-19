@@ -119,6 +119,8 @@
 
 
 ###### Ejecuciones: 
+          Tener en cuenta que la rama actualizada es Feature/RetoPlaywright_JeanColonia
+
 
 ###### Para ejecutar todas las pruebas, usa el comando:
           npm run test
