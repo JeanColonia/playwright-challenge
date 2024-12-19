@@ -52,41 +52,41 @@ El patrón que se ha utilizado para este proyecto es Page Object Model (POM), de
 
 #### Estructura del proyecto:
 
-+node_modules
--orangehrm
- +helpers
- -tests
-     -data
-          +employees
-          +session
-     -features
-          +login
-          +employees
-     -pages
-          +employees
-          LoginPage.ts
-          Page.ts
-     -resources
-          +files
-          +imgs
-          +videos
-     -steps
-          -AddEmployeeSteps.E2E.ts
-          -AddEmployeeSteps.ts
-          -LoginSteps.ts
-     +playwright-report
-     -reports
-          cucumber-report.html
-     +test-results
-     .gitignore
-     cucumber.report-html
-     cucumber.json
-     generate-report.js
-     package.json
-     package-lock.json
-     playwright.config.ts
-     README.md
-     tsconfig.json
+          +node_modules
+          -orangehrm
+          +helpers
+          -tests
+               -data
+                    +employees
+                    +session
+               -features
+                    +login
+                    +employees
+               -pages
+                    +employees
+                    LoginPage.ts
+                    Page.ts
+               -resources
+                    +files
+                    +imgs
+                    +videos
+               -steps
+                    -AddEmployeeSteps.E2E.ts
+                    -AddEmployeeSteps.ts
+                    -LoginSteps.ts
+               +playwright-report
+               -reports
+                    cucumber-report.html
+               +test-results
+               .gitignore
+               cucumber.report-html
+               cucumber.json
+               generate-report.js
+               package.json
+               package-lock.json
+               playwright.config.ts
+               README.md
+               tsconfig.json
 
 
 
