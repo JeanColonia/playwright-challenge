@@ -95,3 +95,36 @@
 
 
 
+
+### Especificaciones para descargar el proyecto e ejecutarlo:
+
+###### Clonar el repositorio: 
+          git clone <URL_DEL_REPOSITORIO>
+
+###### Acceder a la ruta del repositorio descargado: 
+          cd nombre-del-repositorio
+
+
+
+###### Instalar dependencias: 
+          * Descarga e instala Node.js desde Node.js Official Website.
+          * Validar versiones descargadas (node.js y npm).
+          * ejecutar -> npm install
+
+
+###### Configurar TypeScript (De ser requerido): 
+     * Asegúrate de que el archivo tsconfig.json esté configurado correctamente. Este archivo define cómo TypeScript compila el código.
+     * Verifica la configuración básica en el archivo tsconfig.json (ya debería estar en el repositorio).
+     * Si necesitas compilar manualmente los archivos TypeScript, utiliza: npx tsc
+
+
+###### Ejecuciones: 
+
+###### Para ejecutar todas las pruebas, usa el comando:
+          npm run test
+
+
+###### En caso desee ejecutar el e2e tiene varias opciones como tags:
+          npx cucumber-js --tags '@employee_e2e'
+
+
