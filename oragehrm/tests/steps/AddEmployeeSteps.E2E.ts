@@ -10,6 +10,8 @@ import employee from '../data/employees/employee.json';
 import randomValue from '../../helpers/randomValue';
 import { AddEmployeePageE2E } from '../pages/employees/AddEmployeePage.E2E';
 
+import { readFileSync } from 'fs';
+import * as path from 'path';
 
 let browser: Browser;
 let bCtx: BrowserContext;
@@ -32,6 +34,9 @@ BeforeAll(async function () {
  browser = await chromium.launch({ headless: false, channel: "chrome", args: ['--start-maximized'] });
  bCtx = await browser.newContext({ viewport: null, javaScriptEnabled: true });
  page = await bCtx.newPage();
+ bCtx = await browser.newContext({
+  recordVideo: { dir: '/oragehrm/tests/resources/videos/' }, // Specify where to save the videos
+ });
  loginPage = new LoginPage(page);
  addEmployePage = new AddEmployeePage(page);
  employeeList = new EmployeeList(page);

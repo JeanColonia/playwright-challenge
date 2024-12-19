@@ -2,11 +2,10 @@ const reporter = require('cucumber-html-reporter');
 
 const options = {
   theme: 'bootstrap',
-  jsonFile: 'reports/cucumber-report.json', // Archivo JSON generado por Cucumber.js
-  output: 'reports/cucumber-report.html',  // Ruta donde se generará el HTML
+  output: 'reports/cucumber-report.html',  
   reportSuiteAsScenarios: true,
   scenarioTimestamp: true,
-  launchReport: true, // Abre el reporte automáticamente en el navegador
+  launchReport: true, 
   metadata: {
     "App Version": "1.0.0",
     "Test Environment": "STAGING",
@@ -15,6 +14,7 @@ const options = {
     Parallel: "Scenarios",
     Executed: "Remote",
   },
+  embeddedVideos: true
 };
 
 reporter.generate(options);
