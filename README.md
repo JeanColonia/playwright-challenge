@@ -127,4 +127,5 @@
 ###### En caso desee ejecutar el e2e tiene varias opciones como tags:
           npx cucumber-js --tags '@employee_e2e'
 
-
+###### Ejecutar el siguiente comando para visualizar el reporte en Cucumber
+          npm run test:report
